@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Modal, Alert } from 'react-native';
+import { useFonts } from 'expo-font';
+
 
 const charadas = [
   {
@@ -76,6 +78,9 @@ const charadas = [
 ];
 
 const App = () => {
+
+
+
   const [round, setRound] = useState(0);
   const [acertos, setAcertos] = useState(0);
   const [erros, setErros] = useState(0);
@@ -212,6 +217,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    fontFamily: 'Mariana',
     alignItems: 'center',
     paddingHorizontal: 20,
   },
@@ -219,16 +225,19 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 22,
     textAlign: 'center',
+    fontFamily: 'Mariana',
     width: 330,
     alignItems: 'center',
   },
   botao: {
     padding: 10,
     marginBottom: 20,
+    fontFamily: 'Mariana',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     width: 290,
+    fontFamily: 'Mariana',
     height: 52,
     borderRadius: 25,
     textAlign: 'center',
@@ -238,6 +247,7 @@ const styles = StyleSheet.create({
   botaoOk: {
     padding: 10,
     marginBottom: 20,
+    fontFamily: 'Mariana',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -248,13 +258,15 @@ const styles = StyleSheet.create({
   },
   textoBotao: {
     color: 'white',
-    fontWeight: 'bold',
+    fontFamily: 'Mariana',
+
     fontSize: 15
   },
   modalView: {
     position: 'absolute',
     bottom: 0,
     left: 0,
+    fontFamily: 'Mariana',
     right: 0,
     padding: 25,
     borderTopLeftRadius: 30,
@@ -271,6 +283,7 @@ const styles = StyleSheet.create({
   },
   modalText: {
     marginTop: 17,
+    fontFamily: 'Mariana',
     marginBottom: 15,
     textAlign: 'center',
     fontSize: 17
